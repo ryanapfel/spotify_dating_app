@@ -1,3 +1,14 @@
 language: node_js
 node_js:
   - "stable"
+cache:
+  directories:
+    - ~/.npm
+
+install: npm install
+script:
+  - npm test
+  - npm run build
+after_success: npx codecov
+branches:
+  only: master
