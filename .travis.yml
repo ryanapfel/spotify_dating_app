@@ -1,11 +1,5 @@
 language: node_js
 node_js:
   - "stable"
-cache:
-  directories:
-    - ~/.npm
 script:
   - npm test
-after_success: npx codecov
-branches:
-  only: master
